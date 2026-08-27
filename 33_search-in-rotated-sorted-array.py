@@ -9,14 +9,14 @@ class Solution():
                 return mid
             if nums[mid] < nums[right]: #先一边有序
                 if nums[mid] < target <= nums[right]:    #确定在一边
-                    left = mid + 1
+                    left = mid + 1     #从这边缩小边界
                 else:
-                    right = mid -1     #不在这一边
+                    right = mid -1     #不在这一边，跳过这边
             else:
                 if nums[left] <= target < nums[mid]:
-                    right = mid - 1
+                    right = mid - 1  #从这边缩小边界
                 else:
-                    left = mid + 1
+                    left = mid + 1  #不在这一边，跳过这边
         return -1
 
 s = Solution()
