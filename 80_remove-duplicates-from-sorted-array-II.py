@@ -5,7 +5,7 @@ class Solution:
         s = 2
         for i in range(2,len(nums)):
             if nums[i] != nums[s-2]:
-                nums[i] = nums[s]
+                nums[s] = nums[i]
                 s += 1
         return s
 
