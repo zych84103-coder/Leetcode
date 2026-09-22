@@ -5,5 +5,6 @@ def two_sum(nums, target):
         if com in result:
             return [result[com],i]
         result[num] = i
+        print (f"result={result},com={com}")
     return None
 print (two_sum([1, 2, 7, 8, 11, 15], 9))
