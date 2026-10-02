@@ -20,6 +20,7 @@ class solution():
             best = max(best, total)
         print (f"best={best}")
         return best/k
+    
 s = solution()
 print (s.findMaxAverage([1,12,-5,-6,50,3],4))
 print (s.findMaxAverage([5],1))
