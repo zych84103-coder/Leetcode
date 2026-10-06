@@ -61,7 +61,7 @@ print(show(middelNode1(build([1,2,3,4,5]))))     # [3, 4, 5]
 def middelNode2(head):
     slow = head
     fast = head
-    while fast and fast.next:
+    while fast and fast.next:   #make sure in range
         slow = slow.next
         fast = fast.next.next
     return slow
@@ -69,11 +69,11 @@ print(show(middelNode2(build([1,2,3,4,5,6]))))   # [4, 5, 6]
 print(show(middelNode2(build([1,2,3,4,5]))))     # [3, 4, 5]
 
 def middelNode3(head):
-    node = []
+    nodes = []
     cur = head
     while cur:
-        node.append(cur)
+        nodes.append(cur)
         cur = cur.next
-    return node[len(node) // 2]
+    return nodes[len(nodes) // 2]
 print(show(middelNode3(build([1,2,3,4,5,6]))))   # [4, 5, 6]
 print(show(middelNode3(build([1,2,3,4,5]))))     # [3, 4, 5]
