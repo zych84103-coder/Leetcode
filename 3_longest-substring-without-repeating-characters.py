@@ -28,9 +28,7 @@ def lengthOfLongestSubstring(s):
         seen.add(s[right])
         best = max(best, right - left +1)
         print (f"best={best}")
-    if best == 1:
-        return 1
-    else: return best
+    return best
 
 print (lengthOfLongestSubstring("abcabcbb"))
 print (lengthOfLongestSubstring("bbbbb"))
