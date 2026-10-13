@@ -19,7 +19,7 @@ def lengthOfLongestSubstring(s):
     n = len(s)
     seen = set()
     left = 0
-    best = 1
+    best = 0
     for right in range(n):
         while s[right] in seen:
             seen.discard(s[left])
