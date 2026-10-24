@@ -13,17 +13,15 @@
 # Input: nums = [1,3,5,6], target = 7
 # Output: 4
 def searchPosition(nums,target):
-    left = 0
+    left = -1
     right = len(nums)
-    while left < right:
+    while left+1<right:
         mid = (left+right)//2
-        if nums[mid] == target:
-            return mid
-        elif nums[mid] < target:
-            left = mid + 1
-        elif nums[mid] > target:
+        if nums[mid] >= target:
             right = mid
-    return left
+        else:
+            left = mid
+    return right
 
 print(searchPosition([1,3,5,6],5))
 print(searchPosition([1,3,5,6],2))
